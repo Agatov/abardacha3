@@ -156,6 +156,7 @@ a
 
 
     .img
+      display: block
       background: #777
       position: relative
       cursor: pointer
@@ -167,8 +168,14 @@ a
       &.h240
         height: 240px
 
+        .overlay
+          height: 240px
+
       &.h300
         height: 300px
+
+        .overlay
+          height: 300px
 
       &.h400
         height: 400px
@@ -181,15 +188,19 @@ a
         display: none
         position: absolute
         width: 300px
-        background: $blue_color
-        opacity: 0.6
+        background: url('/images/example-hover@2x.png') no-repeat
+        background-size: 28px 28px
+        background-color: rgba(40,168,211,.7)
+        
+        background-position: 50% 50%
+
 
 
     .content
       padding: 20px
 
 
-    a
+    a.bottom
       position: absolute
       left: 20px
       bottom: 20px
