@@ -1,7 +1,7 @@
 # Bundler tasks
 require 'bundler/capistrano'
 
-set :application, "retto"
+set :application, "abardacha"
 set :repository,  "git@github.com:Agatov/abardacha3"
 
 set :scm, :git
