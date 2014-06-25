@@ -24,7 +24,7 @@ class Application < Sinatra::Base
     serve '/fonts', from: 'assets/fonts'
 
     css :application, '/css/application.css', %w(/css/reset.css /css/index.css)
-    js :application, '/js/application.js', %w( /js/jquery-1.9.1.js /js/initializer.js)
+    js :application, '/js/application.js', %w( /js/jquery-1.9.1.js /js/initializer.js /js/form.js)
 
     css_compression :sass
     js_compression :jsmin
@@ -35,6 +35,41 @@ class Application < Sinatra::Base
   end
 
   post '/orders.json' do
+
+    message = "#{params[:order][:name]}. #{params[:order][:phone]}. #{params[:order][:email]}"
+
+    #if params[:order][:message]
+    #  message += "\n\n"
+    #  message += "#{params[:order][:message]}"
+    #end
+
+    Pony.mail ({
+        to: 'abardacha@gmail.com',
+        subject: I18n.t('email.title', locale: 'ru'),
+        body: message,
+        via: :smtp,
+        via_options: {
+            address: 'smtp.gmail.com',
+            port: 587,
+            enable_starttls_auto: true,
+            user_name: 'abardacha@gmail.com',
+            password: 'fiolent149',
+            authentication: :plain
+        }
+    })
+
+
+    HTTParty.post(
+        'http://crm.abardacha.ru/api/clients',
+        query: {
+            client: {
+                name: params[:order][:name],
+                phone: params[:order][:phone],
+                email: params[:order][:email],
+                first_comment: params[:order][:message]
+            }
+        }
+    )
 
     content_type :json
     {status: :success}.to_json
