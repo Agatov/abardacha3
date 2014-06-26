@@ -8,4 +8,4 @@ $ ->
 
 
 window.track = (event_name, options = {}) ->
-  mixpanel.track event_name
+  mixpanel.track event_name, options
