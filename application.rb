@@ -24,7 +24,7 @@ class Application < Sinatra::Base
     serve '/fonts', from: 'assets/fonts'
 
     css :application, '/css/application.css', %w(/css/reset.css /css/index.css)
-    js :application, '/js/application.js', %w( /js/jquery-1.9.1.js /js/initializer.js /js/form.js)
+    js :application, '/js/application.js', %w( /js/jquery-1.9.1.js /js/initializer.js /js/form.js /js/mixpanel.js)
 
     css_compression :sass
     js_compression :jsmin

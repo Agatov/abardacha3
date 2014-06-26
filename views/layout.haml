@@ -3,9 +3,10 @@
     = css :application
     = js :application
     -#%link{rel: "shortcut icon", href: "/favicon.ico"}
+    = erb :mixpanel
     %title
       Разработка страниц захвата
+
   %body
     = yield
     = erb :metrika
-    = erb :mixpanel
