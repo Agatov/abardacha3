@@ -31,6 +31,7 @@ $ ->
 
     show_thank_you()
     reachGoal 'new_order'
+    track 'New order', {name: username.val(), phone: phone.val(), email: email.val()}
 
 
 window.show_thank_you = ->
