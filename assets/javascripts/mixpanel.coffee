@@ -11,7 +11,6 @@ $ ->
 
 
     track 'Work viewed', {work_name: work_name}
-    return false
 
 
 window.track = (event_name, options = {}) ->
