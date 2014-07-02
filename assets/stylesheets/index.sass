@@ -10,6 +10,12 @@
   font-weight: normal
   font-style: normal
 
+@font-face
+  font-family: 'HelveticaNeueCyr-Roman'
+  src: url('/fonts/HelveticaNeueCyr-Roman.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
 
 body
   padding: 0px
@@ -113,6 +119,13 @@ section
     float: right
 
 
+h1
+  font-size: 20px
+  color: #363A40
+  font-family: 'HelveticaNeueCyr-Medium'
+  margin-bottom: 20px
+
+
 h2
   font-size: 18px
   color: #363A40
@@ -132,11 +145,46 @@ p
   line-height: 23px
   margin-bottom: 15px
 
+  &.large
+    font-size: 16px
+    line-height: 25px
+
 a
   font-size: 14px
   color: $blue_color
   font-family: 'HelveticaNeueCyr-Light'
   text-decoration: none
+
+
+
+.blue-block
+  background: $blue_color
+
+  h1
+    color: #fff
+
+  p
+    color: #fff
+    margin-bottom: 0px
+
+
+  .button
+    position: absolute
+    right: 0px
+    top: 50%
+    margin-top: -20px
+    width: 200px
+    height: 50px
+    line-height: 55px
+    text-align: center
+    font-family: 'HelveticaNeueCyr-Roman'
+    color: $dark_text_color
+    background: #fff
+    border-radius: 3px
+    cursor: pointer
+
+    &:hover
+      background: $light_bg_color
 
 
 
