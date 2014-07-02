@@ -155,6 +155,9 @@ a
   font-family: 'HelveticaNeueCyr-Light'
   text-decoration: none
 
+  &:hover
+    color: $dark_text_color
+
 
 
 .blue-block
@@ -166,6 +169,10 @@ a
   p
     color: #fff
     margin-bottom: 0px
+
+    .bolder
+      color: #BEE4F1
+      font-family: 'HelveticaNeueCyr-Medium'
 
 
   .button
@@ -248,10 +255,10 @@ a
       padding: 20px
 
 
-    a.bottom
-      position: absolute
-      left: 20px
-      bottom: 20px
+a.bottom
+  position: absolute
+  left: 20px
+  bottom: 20px
 
 
 
@@ -278,6 +285,41 @@ a
     .big
       font-size: 72px
       padding-bottom: 40px
+
+
+.works-in-progress
+  background: $light_bg_color
+
+
+.projects
+  padding-top: 30px
+  .project
+    float: left
+    width: 300px
+    height: 200px
+    background: #fff
+    margin-right: 30px
+    margin-bottom: 30px
+    position: relative
+    border-radius: 3px
+
+    &:nth-child(3n)
+      margin-right: 0px
+
+    &.last-line
+      margin-bottom: 0px
+
+    &.empty
+      background: none
+      border-radius: none
+      padding-top: 0px
+
+    .content
+      padding: 20px
+
+
+
+
 
 
 form
