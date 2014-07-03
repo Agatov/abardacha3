@@ -38,10 +38,16 @@ class Application < Sinatra::Base
 
     message = "#{params[:order][:name]}. #{params[:order][:phone]}. #{params[:order][:email]}"
 
-    #if params[:order][:message]
-    #  message += "\n\n"
-    #  message += "#{params[:order][:message]}"
-    #end
+
+    if params[:order][:budget]
+      message += "\n\n"
+      message += "Budget: #{params[:order][:budget]}"
+    end
+
+    if params[:order][:about]
+      message += "\n\n"
+      message += "#{params[:order][:about]}"
+    end
 
     Pony.mail ({
         to: 'abardacha@gmail.com',

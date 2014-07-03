@@ -140,16 +140,16 @@
         Напишите ваши контактные данные, бюджет на который вы рассчитываете
         и несколько слов о вашем бизнесе.
         %br
-        Мы рассмотрим ваше предложение и свяжемся с вами.
+        Мы рассмотрим ваше предложение и обязательно свяжемся с вами.
 
     .form-thank-you
       .thank-you-text
         .bolder.big Спасибо за обращение!
-        Я вам обязательно позвоню.
+        Мы свяжемся с вами как только рассмотрим ваше предложение.
     %form.form
       %input{type: :text, name: 'name', placeholder: 'Введите ваше имя'}
       %input{type: :text, name: 'phone', placeholder: 'Введите ваш телефон'}
       %input{type: :text, name: 'email', placeholder: 'Введите ваш e-mail (необязательно)'}
       %input{type: :text, name: 'budget', placeholder: 'Ваш бюджет (можно не заполнять)'}
-      %textarea{name: :about, placeholder: 'Пара слов о вашем бизнесе (по вашему желанию)'}
+      %textarea{name: 'about', placeholder: 'Пара слов о вашем бизнесе (по вашему желанию)'}
       .button#order-button До связи

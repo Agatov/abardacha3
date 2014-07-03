@@ -6,7 +6,7 @@ $ ->
     phone = $('input[name=phone]')
     email = $('input[name=email]')
     budget = $('input[name=budget]')
-    about = $('textrea[name=about]')
+    about = $('textarea[name=about]')
 
     shake_fields = []
 
@@ -19,6 +19,9 @@ $ ->
     if shake_fields.length > 0
       shake_field(field) for field in shake_fields
       return false
+
+
+    console.log about.val()
 
     $.post(
       '/orders.json',
