@@ -5,6 +5,8 @@ $ ->
     username = $('input[name=name]')
     phone = $('input[name=phone]')
     email = $('input[name=email]')
+    budget = $('input[name=budget]')
+    about = $('textrea[name=about]')
 
     shake_fields = []
 
@@ -23,7 +25,9 @@ $ ->
     {
       'order[name]': username.val(),
       'order[phone]': phone.val(),
-      'order[email]': email.val()
+      'order[email]': email.val(),
+      'order[budget]': budget.val(),
+      'order[about]': about.val()
     },
     (data) =>
 
