@@ -6,6 +6,9 @@ $ ->
     work_name = $(@).parent('.work').find('h3').text()
     works_viewed += 1
 
+    if works_viewed == 2
+      show_popup('interested-in-works')
+
     if works_viewed >= 3
       track "#{works_viewed} works viewed"
 

@@ -20,9 +20,6 @@ $ ->
       shake_field(field) for field in shake_fields
       return false
 
-
-    console.log about.val()
-
     $.post(
       '/orders.json',
     {

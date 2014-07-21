@@ -1,0 +1,56 @@
+.overlay
+.popup
+  .block
+    .close-icon x
+
+    .content.interested-in-works
+      .popup-title
+        Мы заметили, что вам интересны наши работы.
+        %br
+        Как скоро вам нужен лендинг?
+
+      .popup-buttons.clearfix
+        .button{action: 'popup-first-form'} В течение месяца
+        .button{action: 'popup-second-form'} Я пока не решил
+
+      .popup-signature
+        Мы искренне ценим вас и нам важно знать ваше мнение.
+
+
+
+    .content.popup-first-form
+      .popup-title
+        Тогда нужно начинать работать уже сейчас!
+        .small
+          Давайте мы вам перезвоним в течение 30 секунд
+          %br
+          и расскажем чем мы можем вам помочь?
+
+      .popup-form.clearfix
+        %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
+        .button.send-popup-form{situation: 'Нужен лендинг в течение 30 дней'} Жду звонка
+
+
+    .content.popup-second-form
+      .popup-title
+        А вы знаете, что лендинги работают не во всех бизнесах?
+        .small
+          Давайте мы вам перезвоним через 30 секунд и подскажем,
+          целесообразно ли делать лендинг в вашем случае.
+
+
+      .popup-form.clearfix
+        %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
+        .button.send-popup-form{situation: 'Пока не решил, когда ему нужен лендос'} Жду звонка
+
+
+    .content.thank-you-screen
+      .popup-title
+        Отлично!
+        .small
+          Наш менеджер уже набирает первые цифры вашего номера.
+
+
+      .popup-buttons
+        .button.hide-popup Закрыть это окно
+
