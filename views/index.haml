@@ -1,8 +1,26 @@
+- if request.env['HTTP_REFERER'] and request.env['HTTP_REFERER'].include? 'molodost.bz'
+
+  .popup-overlay{style: 'display: block'}
+  .popup{style: 'display: block;'}
+    .block
+      .close-icon x
+      .content{style: 'display: block;'}
+        .popup-title
+          Мы заметили, что вы из Бизнес Молодости.
+
+          .small
+            Напишите в форме заявки фразу "Я с БМ" и получите
+            %br
+            скидку 10 000 рублей
+            на наши услуги.
+
+        .popup-buttons.clearfix
+          .button.hide-popup ОК! Буду знать!
+
+
 
 .intro
   .intro-title
-    .olo{style: 'display: none'}
-      = "#{request.env['HTTP_REFERER']}!!!"
     Мы разрабатываем лендинги, страницы захвата
     %br
     и продающие сайты

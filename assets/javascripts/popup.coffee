@@ -37,13 +37,13 @@ $ ->
 
 
 window.show_popup = (start_screen_class) ->
-  $('.overlay').show()
+  $('.popup-overlay').show()
   $(".#{start_screen_class}").show()
   $('.popup').show()
 
 window.hide_popup = ->
   $('.popup').hide()
-  $('.overlay').hide()
+  $('.popup-overlay').hide()
 
 window.hide_current_screen = ->
   $('.popup .block .content').hide()
