@@ -2,11 +2,13 @@ $ ->
 
   $('#order-button').on 'click', ->
 
-    username = $('input[name=name]')
-    phone = $('input[name=phone]')
-    email = $('input[name=email]')
-    budget = $('input[name=budget]')
-    about = $('textarea[name=about]')
+    form = $(@).parents('.form')
+
+    username = form.find('input[name=name]')
+    phone = form.find('input[name=phone]')
+    email = form.find('input[name=email]')
+    budget = form.find('input[name=budget]')
+    about = form.find('textarea[name=about]')
 
     shake_fields = []
 
