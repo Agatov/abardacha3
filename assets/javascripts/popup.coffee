@@ -71,6 +71,8 @@ $ ->
 
     hide_current_screen()
     show_popup_screen('thank-you-screen')
+    reachGoal 'new_order'
+    track 'New order', {name: formname, phone: phone.val()}
 
 
 window.show_popup = (start_screen_class) ->
