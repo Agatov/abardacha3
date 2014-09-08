@@ -1,136 +1,90 @@
-- if request.env['HTTP_REFERER'] and request.env['HTTP_REFERER'].include? 'molodost.bz'
+-# if request.env['HTTP_REFERER'] and request.env['HTTP_REFERER'].include? 'molodost.bz'
 
-  .popup-overlay{style: 'display: block'}
-  .popup{style: 'display: block;'}
-    .block
-      .close-icon x
-      .content{style: 'display: block;'}
-        .popup-title
-          Мы заметили, что вы из Бизнес Молодости.
+.popup-overlay
+.popup#offer-form
+  .block
+    .close-icon x
 
-          .small
-            Напишите в форме заявки фразу "Я с БМ" и получите
-            %br
-            скидку 10 000 рублей
-            на наши услуги.
+    .content.thank-you-screen
+      .popup-title
+        Отлично!
+        .small
+          Наш менеджер свяжется с вами в течение 30 минут.
 
-        .popup-buttons.clearfix
-          .button.hide-popup ОК! Буду знать!
+    .content.form-screen{style: 'display: block;'}
+      .popup-title
+        Оставьте ваши контактные данные
+
+        .small
+          В течение получаса с вами свяжется наш менеджер
+          %br
+          и расскажет в чем разница
+
+      .popup-form.clearfix
+        %input{type: :text, name: :name, placeholder: 'Введите ваше имя'}
+        %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
+        .button.send-popup-form.short{situation: 'Есть ли разница между лендингами за 25 и 50 тысяч?', type: 'name-phone'} →
 
 
+
+.popup#email-form
+  .block
+    .close-icon x
+    .content.form-screen{style: 'display: block;'}
+      .popup-title
+        Оставьте ваши имя и email
+
+        .small
+          Сразу после отправки формы вы получите письмо.
+          %br
+          Подтвердите подписку на рассылку.
+
+
+        .popup-form.clearfix
+          %input{type: :text, name: :name, placeholder: 'Введите ваше имя'}
+          %input{type: :text, name: :email, placeholder: 'Введите ваш email'}
+          .button.send-popup-form.short{situation: 'Есть ли разница между лендингами за 25 и 50 тысяч?', type: 'name-email'} →
+
+
+.popup#second-form
+  .block
+    .close-icon x
+
+    .content.thank-you-screen
+      .popup-title
+        Отлично!
+        .small
+          Наш менеджер свяжется с вами в течение 30 минут.
+    .content.form-screen{style: 'display: block;'}
+      .popup-title
+        Оставьте ваши имя и телефон
+
+        .small
+          В течение получаса с вами свяжется наш менеджер
+          %br
+          и расскажет в чем разница
+
+        .popup-form.clearfix
+          %input{type: :text, name: :name, placeholder: 'Введите ваше имя'}
+          %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
+          .button.send-popup-form.short{situation: '15 крутых способов увеличить эффективность', type: 'name-phone'} →
+
+
+
+-#.topbar
 
 .intro
   .intro-title
-    Мы разрабатываем лендинги, страницы захвата
-    %br
-    и продающие сайты
+    Разработка страниц захвата под ключ
 
   .intro-content
-    Обязательно посмотрите наши работы.
-    %br
-    Каждая из них - наше маленькое конкурентное преимущество ;)
+    Мы небольшое маркетинговое агенство, сосредоточенное на разработке
+    качественных страниц захвата, которые приносят прибыль нашим клиентам
 
   .intro-button.scroll-to-form Заказать звонок
 
--#.about
-  .wrapper.clearfix
-
-    .card
-      %img{src: '/images/agatov.jpg'}
-      .hello Привет
-      %p
-        Меня зовут Кирилл Агатов.
-        %br
-        В течение последних 16 месяцев
-        я занимаюсь разработкой лэндингов на заказ.
-
-      .btn.scroll-to-form Связаться со мной
-
-
-    .principle
-
-      %h2
-        Мой подход к работе
-
-      %p
-        Честно говоря, мне надоело позиционировать себя как крутую команду профессионалов, которая увеличит прибыль вашей компании в целых пять раз всего за две недели. Безусловно, я не работаю один - над каждым проектом трудится группа из копирайтера, дизайнера и программиста, а время от времени привлекаются и более узкопрофильные специалисты.
-
-      %p
-        Я не выдумываю кейсы, не заявляю о рекордных 36% конверсии, я не сделал 278 работ за прошлый год. Единственная причина, по которой вам стоит со мной работать - вы посмотрели все мои работы и поняли, что ваш проект будет сделан на том же уровне, с тем же запасом качества.
-
-      %p
-        И еще, я за простые и эффективные решения.
-
-
-
--#%section.blue-block
-  .wrapper.relative
-    %h1
-      Хотите узнать меня не на словах, а в деле?
-
-    %p.large
-      Вы можете заказать у меня только прототип будущего лэндинга всего за
-      %span.bolder 3 000
-      рублей.
-      %br
-      Если на этом этапе работы вас все устроит - доделаем весь лэндинг со скидкой.
-
-    .button.scroll-to-form.prototype-details
-      Узнать подробности →
 
 = haml :latest_works
-
-
--#%section.works-in-progress
-  .wrapper
-    .title
-      Проекты в работе
-
-    .projects.clearfix
-      .project
-        .content
-          %h3 Асфальтирование территорий
-          %p
-            На данный момент уже готов
-            прототип и начата разработка
-            дизайна. Вы можете скачать
-            прототип и наброски дизайна
-            по ссылке ниже
-
-        %a.bottom{href: '#'} Скачать архив  →
-      .project
-        .content
-          %h3 Продажа роз в Саратове
-          %p
-            По проекту готов прототип, в данный
-            момент он утверждается с заказчиком.
-            Вы можете можете скачать прототип
-            по ссылке ниже.
-
-        %a.bottom{href: '#'} Скачать архив  →
-
-      .project
-        .content
-          %h3 Озеленение территорий
-          %p
-            Проект находится на стадии сбора данных
-            и разработки прототипа, поэтому показать
-            пока нечего.
-      .project.last-line
-        .content
-          %h3 Аренда строительной техники
-          %p
-            Проект находится на стадии сбора данных и разработки прототипа, поэтому показать пока нечего.
-
-
-      .project.last-line.empty
-        .content
-          %p
-            На данный момент я могу взять
-            в работу еще 1-2 проекта. Это не "маркетинговые штучки",
-            просто большее количество проектов отразится на качестве каждого из них.
-            Оставьте заявку в форме ниже и мы пообщаемся
-            о вашем лэндинге.
 
 
 

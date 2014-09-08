@@ -1,7 +1,7 @@
 %section
   .wrapper
     .title
-      Последние работы
+      Последние проекты
     .works.clearfix
       .work
         %a.img.h300{href: 'http://kaleva.abardacha.ru', target: '_blank'}
@@ -53,7 +53,12 @@
         %a.bottom{href: 'http://divnie-okna.abardacha.ru', target: '_blank'}
           divnie-okna.abardacha.ru →
 
+= haml :action
 
+%section
+  .wrapper
+
+    .works.clearfix
       .work
         %a.img.h240{href: 'http://mimicase.abardacha.ru', target: '_blank'}
           .overlay
@@ -104,18 +109,11 @@
           kaleva2.abardacha.ru →
 
 
-      .work
-        %a.img.h400{href: 'http://polymedia.abardacha.ru', target: '_blank'}
-          .overlay
-          %img{src: '/images/works/polymedia_300_400.jpg'}
-        .content
-          %h3 Системная интеграция
-          %p
-            Короткий и лаконичный лэндинг для компании, разрабатывающей проекты конференц-залов, ситуационных центоров и крутых переговорных.
+= haml :email_form
 
-        %a.bottom{href: 'http://polymedia.abardacha.ru', target: '_blank'}
-          polymedia.abardacha.ru →
-
+%section
+  .wrapper
+    .works.clearfix
       .work
         %a.img.h300{href: 'http://marketube.abardacha.ru', target: '_blank'}
           .overlay
@@ -158,32 +156,3 @@
 
         %a.bottom{href: 'http://volvo.abardacha.ru', target: '_blank'}
           volvo.abardacha.ru →
-
-      .work
-        %a.img.h240{href: 'http://chip.abardacha.ru', target: '_blank'}
-          .overlay
-          %img{src: '/images/works/chip_300_240.jpg'}
-        .content
-          %h3 Чиптюнинг автомобилей
-          %p
-            Лэндинг для той же компании, которая продает запчасти для Volvo.
-          %p
-            Увеличение мощности и экономия топлива, посредством тонкой настройки автомобильной электроники
-
-
-
-        %a.bottom{href: 'http://chip.abardacha.ru', target: '_blank'}
-          chip.abardacha.ru →
-
-
-      .work
-        %a.img.h400{href: 'http://univerclub.abardacha.ru', target: '_blank'}
-          .overlay
-          %img{src: '/images/works/univerclub_300_400.jpg'}
-        .content
-          %h3 Печать на футболках
-          %p
-            Лэндинг для компании, печатающей индивидуальные принты на футблоках, толстовках и поло.``
-
-        %a.bottom{href: 'http://univerclub.abardacha.ru', target: '_blank'}
-          univerclub.abardacha.ru →
